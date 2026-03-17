@@ -12,6 +12,8 @@ spec:
       labels:
         app: test
     spec:
+      imagePullSecrets:
+        {{- toYaml .Values.test.imagePullSecrets | nindent 8 }}
       containers:
       - name: test-container
         image: {{ .Values.test.image }}
