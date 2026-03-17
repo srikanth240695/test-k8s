@@ -4,3 +4,6 @@ test:
   replicas: 2
   serviceName: hello-service
   servicetype: NodePort
+  
+  imagePullSecrets:
+    - name: gcr-secret
